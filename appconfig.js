@@ -6,15 +6,17 @@ exports.Config={
     /**
      * IsSandBox 1=沙箱开启 0=非沙箱(正式环境)
      */
-    SanBox:1,
+    SanBox:0,
     /**
      * AppKey
      */
-    AppKey:"21778962",
+    //AppKey:"1021778962",//沙箱测试
+    AppKey:"21778962",//正式环境
     /**
      * AppSecret
      */
-    AppSecret:"4542b85f8e362200d5c81d6a0b38286d",
+    //AppSecret:"sandboxf8e362200d5c81d6a0b38286d",//沙箱测试
+    AppSecret:"4542b85f8e362200d5c81d6a0b38286d",//正式环境
 
     ContainerUrl:function(){
        if(this.SanBox===0)
