@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://cnodejs.org/topic/535601a20d7d0faf140303d8 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta name="description" content="CNode：Node.js专业中文社区">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+      <meta name="author" content="EDP@TaoBao">
+    
+      <meta property="wb:webmaster" content="617be6bd946c6b96">
+    
+
+    <link title="RSS" type="application/rss+xml" rel="alternate" href="http://cnodejs.org/rss">
+
+    
+      <link rel="icon" href="http://cnodejs.org/public/images/cnode_icon_32.png" type="image/x-icon">
+    
+
+    <!-- style -->
+    <link rel="stylesheet" href="http://cnodejs.qiniudn.com/public/stylesheets/index.min.8403c630.min.css" media="all">
+
+    <script async="" src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/analytics.js"></script><script src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/index.min.2bba602e.min.js"></script>
+
+    
+    <title>通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode</title>
+    
+    <meta content="_csrf" name="csrf-param">
+    <meta content="FjMqmCCCpW1Ry5UY8emWGDXh" name="csrf-token">
+  <link type="text/css" rel="stylesheet" href="chrome-extension://ckphchjljlekndhjifdfpmmnlaijimcd/style.css"></head>
+  <body screen_capture_injected="true" ryt13009="1">
+    <!-- navbar -->
+    <script src="http://www.yishuqian.com/plugin.js" type="text/javascript"></script><script src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/public.js" type="text/javascript"></script><div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="http://cnodejs.org/"><img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/logo.png" title="Node.js专业中文社区"></a>
+          <form id="search_form" class="navbar-search" action="http://cnodejs.org/search">
+            <input type="text" id="q" name="q" class="search-query span3" value="">
+          </form>
+          <ul class="nav pull-right">
+            <li><a href="http://cnodejs.org/">首页</a></li>
+            <li><a href="https://github.com/cnodejs/nodeclub/wiki/">Wiki</a></li>
+            
+            
+            <li><a href="http://cnodejs.org/signup">注册</a></li>
+            <li><a href="http://cnodejs.org/signin">登录</a></li>
+            
+          </ul>
+          <a class="btn btn-navbar" id="responsive-sidebar-trigger">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="main">
+      <div id="sidebar">
+  <div class="panel">
+    <div class="header">
+      <span class="col_fade">作者</span>
+    </div>
+    <div class="inner">
+      <div class="user_card">
+	<div>
+		<a class="user_avatar" href="http://cnodejs.org/user/6174">
+			<img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/3872872" title="6174">
+		</a>
+		<span class="user_name"><a class="dark" href="http://cnodejs.org/user/6174">6174</a></span>
+
+		
+
+		<div class="board clearfix">
+			<div class="floor">
+				<a href="http://cnodejs.org/user/6174/collections"><span class="big">5</span> 话题收藏</a>
+			</div>
+			<div class="floor">
+				<a href="http://cnodejs.org/user/6174/following"><span class="big">1</span> 关注</a>
+				<div class="space"></div>
+				<a href="http://cnodejs.org/user/6174/follower"><span class="big">12</span> 粉丝</a>
+				<div class="space"></div>
+				<span class="big">30</span> 积分
+			</div>
+
+      
+		</div>
+	</div>
+</div>
+
+
+
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="header">
+      <span class="col_fade">作者其它话题</span>
+    </div>
+    <div class="inner">
+      
+      <p>无</p>
+      
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="header">
+      <span class="col_fade">无人回复的话题</span>
+    </div>
+    <div class="inner">
+      
+      <ul class="unstyled">
+      <li>
+	<div><a class="dark topic_title" href="http://cnodejs.org/topic/535f7205d762b96719007d76" title="一个小白问题，请大神指教！关于NodeJS的批量更新数据问题。">一个小白问题，请大神指教！关于NodeJS的批量更新数据问题。</a></div>
+</li>
+<li>
+	<div><a class="dark topic_title" href="http://cnodejs.org/topic/535f7134d762b9671900532f" title="NodeJs的Redis客户端遇到failed - connect EMFILE错误">NodeJs的Redis客户端遇到failed - connect EMFILE错误</a></div>
+</li>
+<li>
+	<div><a class="dark topic_title" href="http://cnodejs.org/topic/535f5cedf244da3018008a59" title="[Teahour.FM #52] 简书的产品故事">[Teahour.FM #52] 简书的产品故事</a></div>
+</li>
+<li>
+	<div><a class="dark topic_title" href="http://cnodejs.org/topic/535f402eb28ca22b13023693" title="找一个做Node的朋友一起完成一个项目">找一个做Node的朋友一起完成一个项目</a></div>
+</li>
+<li>
+	<div><a class="dark topic_title" href="http://cnodejs.org/topic/535f3cf5b28ca22b1301730b" title="写了一个DT小模块，command &#39;ping&#39; in angularjs">写了一个DT小模块，command 'ping' in angularjs</a></div>
+</li>
+
+      </ul>
+      
+    </div>
+  </div>
+</div>
+
+<div id="content">
+  <div class="panel">
+    <div class="header">
+      <span class="topic_full_title">
+        
+        通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目
+      </span>
+      <div class="changes">
+        <span>
+          发布于 4-22 01:44,
+          1727 次浏览
+        </span>
+        
+          <span>
+            最后一次编辑是 4-22 08:33
+          </span>
+        
+      </div>
+      
+    </div>
+    <div class="inner topic">
+
+      <div class="topic_content">
+        <div class="markdown-text"><h1>通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目</h1>
+<hr>
+<h2>1. About</h2>
+<hr>
+<ul>
+<li>1.1 <strong>what</strong>:<br>nodeclub 是 cnodejs.org 的源码，CNode 算是一个基本的博客系统，包含文章发布， 关注，评论等功能。这些功能可以说是任何一个网站的基础。从 nodeclub 里可以学到什么？<ul>
+<li>1.基本的架构</li>
+<li>2.开发测试过程</li>
+<li>3.MVC 的设计</li>
+<li>4.middleware 的正确用法</li>
+<li>5.如何设计 Mongodb schema</li>
+<li>6.如何正确的使用 Mongoose</li>
+<li>7.如何实现一个标签系统</li>
+<li>8.plugins? services ?</li>
+<li>9.如何正确的使用 EJS helper</li>
+<li>10.到底该怎样写路由， restful？ </li>
+<li>11.如何做基本的控制验证</li>
+<li>12.如何发邮件</li>
+<li>13.session</li>
+<li>14.GitHub 用户登录</li>
+<li>15.图片上传</li>
+<li>16.消息发送</li>
+</ul>
+</li>
+</ul>
+<p>除了 nodeclub 源码的学习笔记以外， 还会有一点最近捣鼓这一块的经验分享</p>
+<ul>
+<li>1.一个完整的消息订阅设计</li>
+<li>2.消息推送, socket + express 如何合作?</li>
+<li>3.包装 action</li>
+<li>4.蛋疼的异步回调如何处理</li>
+</ul>
+<p><a href="https://github.com/cnodejs/nodeclub" target="_blank">nodeclub源码</a></p>
+<ul>
+<li>1.2 <strong>why</strong>: </li>
+</ul>
+<p>对于想用 nodejs  + express + mongodb 来做网站技术基础的项目， nodeclub 可以说是很好的源码级指南，当然也是我的指南，这篇文章权当做个人学习 nodeclub 的学习笔记。</p>
+<ul>
+<li>1.3 <strong>who</strong></li>
+</ul>
+<pre class="prettyprint language-coffee"><code>who = 一名本应该在写前端的但不知怎的一直在写后端的马脓 -&gt; 
+  @echo 'github: https://github.com/6174'
+  @echo 'weibo: http://weibo.com/u/2254313183'
+  @echo 'email: 57017125@qq.com'
+  @echo 'ps: 一直在求后端partner中，有意者联系我' 
+  @send()</code></pre><h2>2. nodeclub 中用到了哪些开源技术</h2>
+<hr>
+<ul>
+<li><p>2.1 Node.js 项目一大优点就是有一个 <code>package.json</code>,  里边的 <code>dependencies</code> &amp; <code>devDependencies</code> 可以看到这个项目所有的依赖。 对于有经验的开发者来说， 看完 <code>package.json</code> 基本就能知道项目的架构是怎样。 </p>
+</li>
+<li><p>2.2 <strong>dependencies</strong></p>
+</li>
+</ul>
+<ul>
+<li><code>express</code>: 基础框架：</li>
+<li><code>mongodb</code>: 数据存储 </li>
+<li><code>mongoose</code>: orm </li>
+<li><code>connect-mongo</code>: session （对于redis， 可以使用connect-redis）</li>
+<li><code>nodemailer</code>：邮件 </li>
+<li><code>validator</code>：验证 </li>
+<li><code>passport</code>，<code>passport-github</code>： passport， </li>
+<li><code>loader</code>: ejs-view-helper, 静态资源加载处理</li>
+<li>其他： <code>event-proxy</code>, <code>node-markdown</code>, <code>ndir</code></li>
+</ul>
+<ul>
+<li>2.3 <strong>devDependencies</strong></li>
+</ul>
+<ul>
+<li>测试框架：<code>mocha</code>, <code>should</code> </li>
+<li>运行： <code>forever</code></li>
+<li>请求模拟: <code>supertest</code></li>
+</ul>
+<ul>
+<li>2.4 nodeclub 以 express + mongodb + mongoose 作为基本框架, 典型的 MVC 应用</li>
+</ul>
+<ul>
+<li><strong>Model</strong>: 对应mongoose orm， models目录</li>
+<li><strong>view</strong>： ejs模板， views目录</li>
+<li><strong>controler</strong>：express middleware , contollers目录 </li>
+</ul>
+<ul>
+<li>2.5 目录结构：</li>
+</ul>
+<pre class="prettyprint language-undefined"><code>- common/
+- controllers/
+- libs/
+# express中间件， 基本的auth， session 验证
+- middlewares/
+- models/
+#消息， 邮件服务
+- services/
+- plugins/
+#可以看做是对model处理的加工库
+- proxy/
+- test/
+- views/
+- app.js
+- route.js
+- config.js</code></pre><h2>3. 应用入口 <code>app.js</code></h2>
+<hr>
+<p>神圣的入口文件，几乎每个项目都会有一个 entry，对于了解一个应用熟悉入口逻辑很重要。 下面将分步来看看，nodeclub 的 <code>app.js</code> 做了什么：</p>
+<h3>3.1 <code>require(./config)</code></h3>
+<ul>
+<li>3.1.1 应用相关的配置的设置， 主要分为</li>
+</ul>
+<ul>
+<li>1.应用全局数据配置</li>
+<li>2.数据库连接配置</li>
+<li>3.session，auth 相关配置</li>
+<li>4.rss配置</li>
+<li>5.mail配置</li>
+<li>6.第三方连接相关配置， github， weibo</li>
+</ul>
+<p>配置文件也是了解应用的一个好地方， 在 <code>config.default.js</code> 中可以看到以下信息, 这些很可能是我们平时做应用开发的时候没有留意到的地方</p>
+<pre class="prettyprint language-javascript"><code>//--应用数据统计
+google_tracker_id: 'UA-41753901-5',
+
+//--静态文件很可能使用cdn来做
+site_static_host: '', // 静态文件存储域名
+
+//--求解释
+site_enable_search_preview: false, // 开启google search preview
+site_google_search_domain:  'cnodejs.org',  // google search preview中要搜索的域名
+
+//--运营数据
+list_topic_count: 20,
+post_interval: 10000,
+admins: { admin: true },
+side_ads:[]
+allow_sign_up: true,
+
+//--插件模式
+plugins: []</code></pre><ul>
+<li>3.1.2 当然这里的配置文件是 default 的，配置文件可以放在一个 <code>config</code> 的文件夹下面，多个文件的方式来整理。比如运营数据配置和其他数据配置分开，因为很有可能需要做一个小的工具来让非技术人员配置相关参数。这时候可以用一个 <code>index.js</code> 作为 facade，相当于一个大的 node module。 </li>
+</ul>
+<h3>3.2 <code>require('./models')</code></h3>
+<ul>
+<li>3.2.1 之前已经讲了 <code>models/</code> 目录对应 MVC 的 M 部分。 </li>
+<li>3.2.2 <code>models/</code> 目录下面有 <code>index.js</code>, <code>require('./models')</code> 相当于 <code>require('./models/index')</code></li>
+</ul>
+<p>index 相当于一个模型的 facade, <code>index.js</code> 做得事情分别是</p>
+<ul>
+<li>1.connect mongodb </li>
+<li>2.require 各个 model 模块</li>
+<li>3.exports 所有的 model</li>
+</ul>
+<p>简单而言就是初始化了应用 model 层。 </p>
+<ul>
+<li>3.2.3 模型使用 orm 框架 mogoose 来写，了解 mogoose 过后， models 部分的代码也就是秒懂了</li>
+</ul>
+<p>， 我说的只是代码，literaly, 一个项目的核心就是 model 的设计，以前做过的任何项目都是一样， 数据库 table 的设计好坏直接影响应用的开发以及性能。 下面来看看各个 model 的 schema 设计(几乎直接 ctr+c, ctr+v 加上了一点点注释) :</p>
+<ul>
+<li>3.2.4 user</li>
+</ul>
+<pre class="prettyprint language-javascript"><code>var UserSchema = new Schema({
+  //--基本用户信息， index表示在mongodb中会建立索引
+  //--unique: true 唯一性设置
+  name: { type: String, index: true },
+  loginname: { type: String, unique: true },
+  pass: { type: String },
+  email: { type: String, unique: true },
+  url: { type: String },
+  profile_image_url: {type: String},
+  location: { type: String },
+  signature: { type: String },
+  profile: { type: String },
+  weibo: { type: String },
+  avatar: { type: String },
+  githubId: { type: String, index: true },
+  githubUsername: {type: String},
+  is_block: {type: Boolean, default: false},
+
+  //--用户产生数据meta
+  score: { type: Number, default: 0 },
+  topic_count: { type: Number, default: 0 },
+  reply_count: { type: Number, default: 0 },
+  follower_count: { type: Number, default: 0 },
+  following_count: { type: Number, default: 0 },
+  collect_tag_count: { type: Number, default: 0 },
+  collect_topic_count: { type: Number, default: 0 },
+  create_at: { type: Date, default: Date.now },
+  update_at: { type: Date, default: Date.now },
+  is_star: { type: Boolean },
+  level: { type: String },
+  active: { type: Boolean, default: true },
+
+  //-mail
+  receive_reply_mail: {type: Boolean, default: false },
+  receive_at_mail: { type: Boolean, default: false },
+  from_wp: { type: Boolean },
+  retrieve_time : {type: Number},
+  retrieve_key : {type: String}
+});</code></pre><ul>
+<li>3.2.5 topic 话题</li>
+</ul>
+<pre class="prettyprint language-javascript"><code>//1 &lt;- 多
+//tag &lt;- topic &lt;- collect  
+var TopicSchema = new Schema({
+  title: { type: String },
+  content: { type: String },
+  author_id: { type: ObjectId },
+  top: { type: Boolean, default: false },
+  reply_count: { type: Number, default: 0 },
+  visit_count: { type: Number, default: 0 },
+  collect_count: { type: Number, default: 0 },
+  create_at: { type: Date, default: Date.now },
+  update_at: { type: Date, default: Date.now },
+  //--这里reply的设计方式不知道是否合适， 因为mongdb不同于关系型数据库，这里每次读取文章都需要重reply集合里边查找遍历一边，文章是读繁忙的。
+  //-- 一个document的大小为5Mb， 一本牛津词典的内容， 我觉得将reply放在这里应该不会有太大问题。 即便不存放reply 内容， 存放一个id数组也会好很多。
+  //-- 客官们怎么看?  
+  last_reply: { type: ObjectId },
+  last_reply_at: { type: Date, default: Date.now },
+  content_is_html: { type: Boolean }
+});
+
+var ReplySchema = new Schema({
+  content: { type: String },
+  topic_id: { type: ObjectId, index: true },
+  author_id: { type: ObjectId },
+  reply_id : { type: ObjectId },
+  create_at: { type: Date, default: Date.now },
+  update_at: { type: Date, default: Date.now },
+  content_is_html: { type: Boolean }
+});
+
+//--话题集合
+var TopicCollectSchema = new Schema({
+  user_id: { type: ObjectId },
+  topic_id: { type: ObjectId },
+  create_at: { type: Date, default: Date.now }
+});
+
+//--话题标签
+var TopicTagSchema = new Schema({
+  topic_id: { type: ObjectId },
+  tag_id: { type: ObjectId },
+  create_at: { type: Date, default: Date.now }
+});</code></pre><ul>
+<li>3.2.6 tag<br>标签系统</li>
+</ul>
+<pre class="prettyprint language-javascript"><code>//tag &lt;- collect
+var TagSchema = new Schema({
+  name: { type: String },
+  order: { type: Number, default: 1 },
+  description: { type: String },
+  background: { type: String },
+  topic_count: { type: Number, default: 0 },
+  collect_count: { type: Number, default: 0 },
+  create_at: { type: Date, default: Date.now }
+});
+
+var TagCollectSchema = new Schema({
+  user_id: { type: ObjectId, index: true },
+  tag_id: { type: ObjectId },
+  create_at: { type: Date, default: Date.now }
+});</code></pre><ul>
+<li>3.2.7 关系 </li>
+</ul>
+<pre class="prettyprint language-javascript"><code>var RelationSchema = new Schema({
+  user_id: { type: ObjectId },
+  follow_id: { type: ObjectId },
+  create_at: { type: Date, default: Date.now }
+});</code></pre><ul>
+<li>3.2.8 消息<br>消息 model 设计， 对于一个 blog 来说， 基本的只有回复消息， 这里加了关注和@消息。 </li>
+</ul>
+<pre class="prettyprint language-javascript"><code>/*
+ * type:
+ * reply: xx 回复了你的话题
+ * reply2: xx 在话题中回复了你
+ * follow: xx 关注了你
+ * at: xx ＠了你
+ */
+var MessageSchema = new Schema({
+  type: { type: String },
+  master_id: { type: ObjectId, index: true },
+  author_id: { type: ObjectId },
+  topic_id: { type: ObjectId },
+  reply_id: { type: ObjectId },
+  has_read: { type: Boolean, default: false },
+  create_at: { type: Date, default: Date.now }
+});</code></pre><h3>3.3 require middlewares</h3>
+<ul>
+<li><p>3.3.1 express 的基础是 middleware，或者说 express 的基础是 connect，connect 的基础是 middleware。middleware 模式在 professional nodejs 中有一个专门的章节来讲解。何为 middleware 呢？ middleware 模式 相当于一个加工流水线（大家叫 middleware stack），每一个 middleware 相当于一个加工步骤，当出现一个 http 请求的时候，http 请求会挨着每个 middleware 执行下去。<br>express 里处理一个请求的过程基本上就是请求通过 middleware stack 的过程：  * -&gt; middlewares -&gt; 路由 -&gt; controllers -&gt; errorhandlering。 </p>
+</li>
+<li><p>3.3.2 middleware 怎样做到的， 异步的方法呢？ middleware 使用 promise 的方式来处理异步，所有每个 middleware 都有三个参数 <code>req, res, next</code>, 对于异步的情况， 必须要调用 <code>next()</code> 方法。不然后续的 middleware 就无法执行。 ps: debug 的时候没调用 <code>next()</code> 还不会报错，一定注意</p>
+</li>
+<li><p>3.3.3 auth.js</p>
+</li>
+</ul>
+<p><code>auth.js</code> exports 出来的函数全部都是中间件，从变量名就完全清楚的知道到底在做什么了</p>
+<pre class="prettyprint language-javascript"><code>
+//-- 需要admin权限
+exports.adminRequired = function (req, res, next) {}
+
+//-- 需要有用户
+exports.userRequired = function (req, res, next) {}
+
+//-- 需要有用户并登录
+exports.signinRequired = function (req, res, next) {
+    if (!req.session.user) {
+        res.render('notify/notify', {error: '未登入用户不能发布话题。'});
+        return;
+    }
+    next();   
+}
+
+//-- 屏蔽用户 -_-
+exports.blockUser = function (req, res, next) {}</code></pre><p>这里其实就可以看到中间件的作用了，我们以前写 php 的时候每次都需要判断用户是否登录， 没登陆 redirect 到 <code>index.php</code> ，只不过这里的方式是通过中间件来处理。<br>明白这里什么意思，其他的中间件模块也就秒懂了。 </p>
+<h3>3.4 require('./routes')</h3>
+<ul>
+<li><p>3.4.1 express 的世界里另外一个很重要的就是route， Node.js 启动的是服务， 监听了某一端口， 接受 http or https or socket 请求,   那 url 中像 <code>/index.php?blabla</code> 这一串的存在怎么处理呢， express 的 route 功能就可以帮我们解析。 </p>
+</li>
+<li><p>3.4.2 MVC 中如何将一个请求和 controller 联系起来呢， route 就是这样的纽带</p>
+</li>
+</ul>
+<pre class="prettyprint language-javascript"><code>//--get, post 请求
+app.get('/signin', sign.showLogin);
+app.post('/signin', sign.login);
+//--使用中间件
+app.get('/signup', configMiddleware.github, passport.authenticate('github'));
+app.post('/:topic_id/reply', auth.userRequired, limit.postInterval, reply.add);</code></pre><ul>
+<li>3.4.3 route 是了解一个应用最佳的地方，一个请求如何处理， 到相应的 controller 去看就知道了。 相比起在PHP环境下配置更加灵活。当然你说你通过nginx来配置也很灵活，好吧，我们说的不是一回事。 </li>
+</ul>
+<h3>3.5 initialization</h3>
+<ul>
+<li>3.5.1 experess initialize: <code>app.js</code> 中其他大多部分就是express的初始化了， 初始化流程如下：</li>
+</ul>
+<ul>
+<li>1.配置上传 upload_dir</li>
+<li>2.模板引擎设置 </li>
+<li>3.express 通用中间件设置 </li>
+<li>4.pasport 中间件</li>
+<li>5.自定义中间件 <ul>
+<li>1.auth_user</li>
+<li>2.block_user</li>
+<li>3.staticfile: upload </li>
+<li>4.staticfile: user_data</li>
+</ul>
+</li>
+<li>6.csrf</li>
+<li>7.errorhandler</li>
+<li>8.set view cache</li>
+</ul>
+<p><code>@Note</code>：配置的顺序很重要， 中间件的执行顺序是按照定义顺序来执行的， 如果一个中间件依赖另外的中间件， 而自己先执行了， 这种情况就会错误。 常见的问题就是session配置， 一定要记得配置 session 中间件的时候， 要先配置 cookieParser。 </p>
+<ul>
+<li>3.5.2 session 设置</li>
+</ul>
+<p>这个步骤在 initialize 里边已经有了， 不过再单独讲一下， nodeclub 使用的是 connect-mongo 来作为 session 的存储</p>
+<pre class="prettyprint language-javascript"><code>  //--cookieParser一定要在前面， 因为session的设置依赖cookie
+  app.use(express.cookieParser());
+  app.use(express.session({
+    secret: config.session_secret,
+    store: new MongoStore({
+      db: config.db_name,
+    }),
+  }));</code></pre><ul>
+<li>3.5.3 view helpers </li>
+</ul>
+<p>使用过 ejs 的肯定知道， ejs 里边 view helper 设置很简单， 就像赋值变量一样。 当对于一些通用的 helper 可以这样设置：</p>
+<pre class="prettyprint language-javascript"><code>    app.helpers({
+      config: config,
+      Loader: Loader,
+      assets: assets
+    });
+    app.dynamicHelpers(require('./common/render_helpers'));</code></pre><ul>
+<li>3.5.4 github pasport initialize</li>
+</ul>
+<pre class="prettyprint language-javascript"><code>    // github oauth
+    passport.serializeUser(function (user, done) {
+      done(null, user);
+    });
+    passport.deserializeUser(function (user, done) {
+      done(null, user);
+    });
+    passport.use(new GitHubStrategy(config.GITHUB_OAUTH, githubStrategyMiddleware));</code></pre><ul>
+<li>3.5.5 start app</li>
+</ul>
+<h2>4. 用户注册</h2>
+<hr>
+<ul>
+<li>4.1 user 是每个应用都会处理的基本， 注册登录登出， 看看 nodeclub 做了哪些事情：</li>
+<li>4.2 路由：</li>
+</ul>
+<pre class="prettyprint language-javascript"><code>//--设置能否直接注册， 不能的话通过github注册
+if (config.allow_sign_up) {
+  app.get('/signup', sign.showSignup);
+  app.post('/signup', sign.signup);
+} else {
+  app.get('/signup', configMiddleware.github, passport.authenticate('github'));
+}
+app.post('/signout', sign.signout);
+app.get('/signin', sign.showLogin);
+app.post('/signin', sign.login);</code></pre><ul>
+<li>4.3 controller &amp; model：sign.signup</li>
+</ul>
+<pre class="prettyprint language-javascript"><code>sanitize = validator.sanitize;
+check = validator.check;
+exports.signup = function (req, res, next) {
+  //--xss 消毒
+  var name = sanitize(req.body.name).trim();
+  name = sanitize(name).xss();
+  ...
+  //--validations
+  try {
+    check(name, '用户名只能使用0-9，a-z，A-Z。').isAlphanumeric();
+  } catch (e) {
+    res.render('sign/signup', {error: e.message, name: name, email: email});
+    return;
+  }
+  ...
+  //--用用户名登录或者email登录
+  query = {'$or': [{'loginname': loginname}, {'email': email}]}
+  User.getUserByQuery(query, {}, function(){
+    ...
+    pass = md5(pass);
+    ...
+    User.newAndSave(name, loginname, pass, email, avatar_url, false, function (err) {
+      ...
+      // 发送激活邮件
+      mail.sendActiveMail(email, md5(email + config.session_secret), name);
+      res.render('sign/signup', {
+        success: '欢迎加入 ' + config.name + '！我们已给您的注册邮箱发送了一封邮件，请点击里面的链接来激活您的帐号。'
+      });
+    })
+  })
+}</code></pre><h2>5. mongoose 的使用</h2>
+<hr>
+<ul>
+<li>5.1 使用User.newAndSave， </li>
+<li>5.2 异步 callback pyramid</li>
+</ul>
+<p>一个应用通常会遇到这样的情景， 一个页面需要的数据包括， 文章列表， 评论列表，用户数据，广告数据， other stuff...   问题是每个都是异步的， 怎么办。 user 数据获取过后的 callback 调用文章列表获取， 文章列表获取的 callback 调用评论列表的获取... 这样就太蛋疼了。  nodeclub 使用了 eventproxy 模块优雅的解决这样的问题：</p>
+<pre class="prettyprint language-javascript"><code>  render = function(){}
+  var proxy = EventProxy.create('tags', 'topics', 'hot_topics', 'stars', 'tops', 'no_reply_topics', 'pages', render);
+  proxy.fail(next);
+  Tag.getAllTags(proxy.done('tags'));
+  Topic.getTopicsByQuery(query, options, proxy.done('topics'));
+  User.getUsersByQuery({ is_star: true }, { limit: 5 }, proxy.done('stars'));</code></pre><p>看完代码不言而喻。。。<br>当然异步处理的方法有很多: </p>
+<ul>
+<li>1.基于事件的：eventProxy</li>
+<li>2.基于promise的：Async.js Q.js, when.js</li>
+<li>3.基于编译的：continuation, wind</li>
+<li>4.基于语言语法的：yield， livescript</li>
+</ul>
+<p>文章最后会讲一下我我的异步选择方案</p>
+<h2>6. 消息</h2>
+<hr>
+<ul>
+<li>6.1 原先以为有动态的消息推送， 有队列处理， 错了， 木有</li>
+<li>6.2 在 Sublime text 里边全局搜索 <code>sendReply2Message</code> 会发现是在 <code>controller/reply.js</code> 里边调用的， 也就是说，消息是直接触发的。 </li>
+<li>6.3 好吧， 这部分大概大家都能秒懂。。</li>
+</ul>
+<h2>7. 开发</h2>
+<hr>
+<h3>7.1 测试</h3>
+<ul>
+<li>7.1.1 一个项目必定离不开测试， nodeclub基于mocha BDD测试框架， 一切的前提假设至少能看懂jasmine或者mocha或者任何一个BDD风格的测试代码。 </li>
+<li>7.1.2  打开即看到app.js</li>
+</ul>
+<pre class="prettyprint language-javascript"><code>var app = require('../app');
+describe('app.js', function () {
+  //--before， 执行it的前面会执行
+  before(function (done) {
+    //--done, 异步方法
+    app.listen(3001, done);
+  });
+  after(function () {
+    app.close();
+  });
+  it('should / status 200', function (done) {
+    //--使用 app.request()就可以模拟请求了？ 这个api哪里来的， 求解释？
+    app.request().get('/').end(function (res) {
+      res.should.status(200);
+      done();
+    });
+  });
+});
+//--按理说应该是可以正常运行了但是我一直出现这个错误:
+//--connect ADDRNOTAVAIL 知道的求解释
+//--我尝试用supertest直接测试， 但是也是一直timeout， mocha
+//--里边加大timeout时间， 结果就是一直没反应。 
+
+//--分析原因， express版本问题， nodeclub中express的版本还是2.x, 所以才会有
+//--app.request(), app.close()这些api
+//--第二个原因， 到supertest官网， 发现人家都已经转战到superagent项目了， 于是我写了下面这个测试脚本， 可以通过了
+var express = require('express');
+var should = require('should');
+var path = require('path');
+var superagent = require('superagent');
+var app = express()
+app.get('/user', function(req, res, next) {
+    res.send(200, {
+        name: 'tobi'
+    })
+})
+describe('myapp.js', function() {
+    this.timeout(5000)
+    before(function(done) {
+        app.listen(21, done);
+    })
+    after(function() {
+        // app.close()
+    })
+    it('should /status 200', function(done) {
+        agent = superagent.agent()
+        agent.get('http://localhost:21/user').end(function(err, res) {
+          console.log(err, res)
+          res.should.have.status(200);
+          res.text.should.include('tobi');
+          return done();
+        });
+    })
+})</code></pre><h3>7.2 运行</h3>
+<ul>
+<li>nodejs是单线程应用， 如果我们用node命令来运行我们的应用， 当出现一个小错误， 它就挂了。 然后没有然后了。  避免这种问题的方法有如下工具：</li>
+</ul>
+<ul>
+<li>1.forever</li>
+<li>2.nodemon</li>
+<li>3.supervisor<br>nodeclub 使用 forever 来运行项目， 使用这类工具的好处就是， 当有代码改动过后， 会自动的重启应用。 不必每次自己去运行 <code>node *.js</code></li>
+</ul>
+<h2>8. 说说自己的经验</h2>
+<hr>
+<p>待续...</p>
+<h3>8.1 消息订阅设计</h3>
+<h3>8.2 express + socket</h3>
+<h3>8.3 异步</h3>
+<h3>8.4 Action</h3>
+</div>
+      </div>
+
+      <div class="action">
+        <button class="btn btn-success" id="share_weibo_btn" onclick="((function(s,d,e,r,l,p,t,z,c){var f=&#39;http://v.t.sina.com.cn/share/share.php?appkey=3020045345&#39;,u=z||d.location,p=[&#39;&amp;url=&#39;,e(u),&#39;&amp;title=&#39;,e(t||d.title),&#39;&amp;source=&#39;,e(r),&#39;&amp;sourceUrl=&#39;,e(l),&#39;&amp;content=&#39;,c||&#39;gb2312&#39;,&#39;&amp;pic=&#39;,e(p||&#39;&#39;)].join(&#39;&#39;);function a(){if(!window.open([f,p].join(&#39;&#39;),&#39;mb&#39;,[&#39;toolbar=0,status=0,resizable=1,width=440,height=430,left=&#39;,(s.width-440)/2,&#39;,top=&#39;,(s.height-430)/2].join(&#39;&#39;)))u.href=[f,p].join(&#39;&#39;);};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else a();})(screen,document,encodeURIComponent,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;分享来自CNode的话题：通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目&#39;,&#39;&#39;,&#39;&#39;));">分享到微博</button>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="panel">
+    <div class="header">
+      <span class="col_fade">16 回复</span>
+    </div>
+    <div class="cell reply_area reply_item" id="reply1" reply_id="535650c813bdad651a083840">
+  <a class="anchor" id="535650c813bdad651a083840"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/jiyinyiyong" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/449224" title="jiyinyiyong"></a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/jiyinyiyong">jiyinyiyong
+      </a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#535650c813bdad651a083840">4-22 07:21</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+        <!---->
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+  <div class="markdown-text"><p>文章不错.. 就是 Markdown 格式改了我好久..</p>
+</div>
+  </div>
+  <div class="clearfix">
+    <div class="reply2_area">
+      
+      
+    </div>
+  </div>
+</div>
+<div class="cell reply_area reply_item" id="reply2" reply_id="53565f4013bdad651a09de41">
+  <a class="anchor" id="53565f4013bdad651a09de41"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/alsotang" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/1147375" title="alsotang"></a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/alsotang">alsotang
+      </a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#53565f4013bdad651a09de41">4-22 08:23</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+        <!--
+         <span class='col_fade'>{1}</span>
+        -->
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+  <div class="markdown-text"><p>good! 已置顶。坐等更新。</p>
+<p>nodeclub 这么烂的代码都有人愿意来看，着实让人感动不已。</p>
+</div>
+  </div>
+  <div class="clearfix">
+    <div class="reply2_area">
+      
+        <div class="cell reply2_item" reply_id="535700b513bdad651a18ed41">
+  <a class="anchor" id="535700b513bdad651a18ed41"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/6174" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/3872872" title="6174">
+    </a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/6174">6174</a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#535700b513bdad651a18ed41">4-22 19:52</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+    <div class="markdown-text"><p>thx,  居然置顶了， 万分感动啊。  看你们代码说明是真爱啊， 哈哈！</p>
+</div>
+  </div>
+</div>
+
+      
+      
+    </div>
+  </div>
+</div>
+<div class="cell reply_area reply_item" id="reply3" reply_id="5356662b13bdad651a0ab864">
+  <a class="anchor" id="5356662b13bdad651a0ab864"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/alsotang" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/1147375" title="alsotang"></a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/alsotang">alsotang
+      </a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#5356662b13bdad651a0ab864">4-22 08:52</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+        <!--
+         <span class='col_fade'>{1}</span>
+        -->
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+  <div class="markdown-text"><ol>
+<li><p>关于 mongoose schema 那里楼主的疑问，解答是：nodeclub 几乎没有利用 mongodb 的特性。</p>
+</li>
+<li><p>nodeclub 的测试很不全，不过里面的测试大致上是最佳实践的样子。</p>
+</li>
+</ol>
+</div>
+  </div>
+  <div class="clearfix">
+    <div class="reply2_area">
+      
+        <div class="cell reply2_item" reply_id="535700e913bdad651a18f3e5">
+  <a class="anchor" id="535700e913bdad651a18f3e5"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/6174" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/3872872" title="6174">
+    </a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/6174">6174</a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#535700e913bdad651a18f3e5">4-22 19:53</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+    <div class="markdown-text"><p>恩， 测试部分很值得参考借鉴。 </p>
+</div>
+  </div>
+</div>
+
+      
+      
+    </div>
+  </div>
+</div>
+<div class="cell reply_area reply_item" id="reply4" reply_id="5356846f13bdad651a0f2abd">
+  <a class="anchor" id="5356846f13bdad651a0f2abd"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/ilufei" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/7371068" title="ilufei"></a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/ilufei">ilufei
+      </a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#5356846f13bdad651a0f2abd">4-22 11:02</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+        <!--
+         <span class='col_fade'>{1}</span>
+        -->
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+  <div class="markdown-text"><p>火钳留名~支持下~</p>
+</div>
+  </div>
+  <div class="clearfix">
+    <div class="reply2_area">
+      
+        <div class="cell reply2_item" reply_id="5357010813bdad651a18f55e">
+  <a class="anchor" id="5357010813bdad651a18f55e"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/6174" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/3872872" title="6174">
+    </a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/6174">6174</a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#5357010813bdad651a18f55e">4-22 19:53</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+    <div class="markdown-text"><p>多谢支持 ： -）</p>
+</div>
+  </div>
+</div>
+
+      
+      
+    </div>
+  </div>
+</div>
+<div class="cell reply_area reply_item" id="reply5" reply_id="53568d1013bdad651a1059a9">
+  <a class="anchor" id="53568d1013bdad651a1059a9"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/wssgcg1213" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/3922719" title="wssgcg1213"></a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/wssgcg1213">wssgcg1213
+      </a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#53568d1013bdad651a1059a9">4-22 11:38</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+        <!---->
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+  <div class="markdown-text"><p>前排留名哈~</p>
+</div>
+  </div>
+  <div class="clearfix">
+    <div class="reply2_area">
+      
+      
+    </div>
+  </div>
+</div>
+<div class="cell reply_area reply_item" id="reply6" reply_id="5357146113bdad651a1b3d1e">
+  <a class="anchor" id="5357146113bdad651a1b3d1e"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/f2st" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/7055332" title="f2st"></a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/f2st">f2st
+      </a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#5357146113bdad651a1b3d1e">4-22 21:16</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+        <!---->
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+  <div class="markdown-text"><p>收藏了</p>
+</div>
+  </div>
+  <div class="clearfix">
+    <div class="reply2_area">
+      
+      
+    </div>
+  </div>
+</div>
+<div class="cell reply_area reply_item" id="reply7" reply_id="53573842d55739392700f81a">
+  <a class="anchor" id="53573842d55739392700f81a"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/pengqinglan" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/6070880" title="pengqinglan"></a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/pengqinglan">pengqinglan
+      </a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#53573842d55739392700f81a">4-22 23:49</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+        <!---->
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+  <div class="markdown-text"><p>感谢，对自己很有帮助 ：-）</p>
+</div>
+  </div>
+  <div class="clearfix">
+    <div class="reply2_area">
+      
+      
+    </div>
+  </div>
+</div>
+<div class="cell reply_area reply_item" id="reply8" reply_id="53576f56d5573939270be681">
+  <a class="anchor" id="53576f56d5573939270be681"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/coolicer" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/06c787094a6d37ab8281d90b40a33a0e" title="coolicer"></a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/coolicer">coolicer
+      </a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#53576f56d5573939270be681">4-23 03:44</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+        <!---->
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+  <div class="markdown-text"><p>收藏，慢慢看。</p>
+</div>
+  </div>
+  <div class="clearfix">
+    <div class="reply2_area">
+      
+      
+    </div>
+  </div>
+</div>
+<div class="cell reply_area reply_item" id="reply9" reply_id="5358658e2806350e2a1b16fb">
+  <a class="anchor" id="5358658e2806350e2a1b16fb"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/fantasyni" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/ca85331e7802fd880930417a74086671" title="fantasyni"></a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/fantasyni">fantasyni
+      </a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#5358658e2806350e2a1b16fb">4-23 21:14</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+        <!--
+         <span class='col_fade'>{2}</span>
+        -->
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+  <div class="markdown-text"><p>nodeclub 代码说实话一般啊，坑也很多</p>
+</div>
+  </div>
+  <div class="clearfix">
+    <div class="reply2_area">
+      
+        <div class="cell reply2_item" reply_id="53586b262806350e2a1c337a">
+  <a class="anchor" id="53586b262806350e2a1c337a"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/6174" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/3872872" title="6174">
+    </a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/6174">6174</a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#53586b262806350e2a1c337a">4-23 21:38</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+    <div class="markdown-text"><p>求几个好的项目源码</p>
+</div>
+  </div>
+</div>
+<div class="cell reply2_item" reply_id="535b3d0cef6305b441010e01">
+  <a class="anchor" id="535b3d0cef6305b441010e01"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/zhanyouwei" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/7271533" title="zhanyouwei">
+    </a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/zhanyouwei">zhanyouwei</a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#535b3d0cef6305b441010e01">4-26 00:58</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+    <div class="markdown-text"><p>希望可以给他贡献点力量啊</p>
+</div>
+  </div>
+</div>
+
+      
+      
+    </div>
+  </div>
+</div>
+<div class="cell reply_area reply_item" id="reply10" reply_id="5358682a2806350e2a1b925c">
+  <a class="anchor" id="5358682a2806350e2a1b925c"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/cnwang" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/f79be1b1349a6652945ac0812751f884" title="cnwang"></a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/cnwang">cnwang
+      </a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#5358682a2806350e2a1b925c">4-23 21:26</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+        <!---->
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+  <div class="markdown-text"><p>赞！<br>源码看过几次了<br>但一直没有像你一样写下来和总结心得，值得学习！</p>
+</div>
+  </div>
+  <div class="clearfix">
+    <div class="reply2_area">
+      
+      
+    </div>
+  </div>
+</div>
+<div class="cell reply_area reply_item" id="reply11" reply_id="535878f82806350e2a1ed535">
+  <a class="anchor" id="535878f82806350e2a1ed535"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/ChJJin" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/1" title="ChJJin"></a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/ChJJin">ChJJin
+      </a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#535878f82806350e2a1ed535">4-23 22:37</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+        <!--
+         <span class='col_fade'>{2}</span>
+        -->
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+  <div class="markdown-text"><p>nodeclub也是我看的第一个node的项目，不过当时就没作者（学家？）看的这么系统了，学习了！</p>
+</div>
+  </div>
+  <div class="clearfix">
+    <div class="reply2_area">
+      
+        <div class="cell reply2_item" reply_id="5358eb0ee79a05ee1400b826">
+  <a class="anchor" id="5358eb0ee79a05ee1400b826"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/huanghuiquan" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/1880596" title="huanghuiquan">
+    </a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/huanghuiquan">huanghuiquan</a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#5358eb0ee79a05ee1400b826">4-24 06:44</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+    <div class="markdown-text"><p>额，最近沉迷nodejs，求教</p>
+</div>
+  </div>
+</div>
+<div class="cell reply2_item" reply_id="535a6216835f3764370025e6">
+  <a class="anchor" id="535a6216835f3764370025e6"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/ChJJin" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/1" title="ChJJin">
+    </a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/ChJJin">ChJJin</a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#535a6216835f3764370025e6">4-25 09:24</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+    <div class="markdown-text"><p><a href="http://cnodejs.org/user/huanghuiquan" target="_blank">@huanghuiquan</a> 小泉也来混了，哈哈！多看些项目 / packages的source code，自己也写写。。</p>
+</div>
+  </div>
+</div>
+
+      
+      
+    </div>
+  </div>
+</div>
+<div class="cell reply_area reply_item" id="reply12" reply_id="535904e50f7ba6611700eb4f">
+  <a class="anchor" id="535904e50f7ba6611700eb4f"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/runkingzhang" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/000356965643ba0007b76843c56a4704" title="runkingzhang"></a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/runkingzhang">runkingzhang
+      </a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#535904e50f7ba6611700eb4f">4-24 08:34</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+        <!--
+         <span class='col_fade'>{1}</span>
+        -->
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+  <div class="markdown-text"><p>本来我也想写一个学习文档的。<br>Node Club还是比较好的学习资料，认真的看代码，并且在基础上做一定的二次开发会比写书籍上面的小代码和写个blog锻炼人。<br>我前一个月用Node Club搭建了一个小区的社交平台<br> <a href="http://highhome.org/" target="_blank">highhome</a><br>个人感觉是看朴灵的《深入浅出Node.js》 然后用Node Club练手会是比较好的node学习方式。<br>几点感受：<br>1.node club 好歹也算的上是完整的项目，比写个blog和聊天室要锻炼的人。可以看到node的文件目录建立，和MVC设计，这边可以结合《深入浅出Node.js》中的第8章　构建Web应用。总之node club可以被当做node学习从0到1的跨越。<br>2.express 2.x的版本比较老，比较蛋痛。社区可以考虑更新一下。<br>3.<a href="http://mongoosejs.com/" target="_blank">mongoose</a>和 <a href="https://github.com/JacksonTian/eventproxy" target="_blank">eventProxy</a>是好东西。可以让网站的结构和mvc设计上一个档次。<br>4.Node Club中原来的tag标签功能和图片上传功能是被封死的，读者要在源代码上做一定的修改。<br>5.Node Club涉及到的异步操作不多，这部分内容大部分都被eventProxy代劳，只有在图片上传文件移动中有涉及。<br>6.实际发布中要用nginx方向链接，这边要去掉端口，在config中设置debug: false,邮件发送要在原来的基础上加上 secureConnection: true。<br>7.在cnode中搜索Node Club可以解决你在开发中遇到的问题。<br>8.测试这一块的内容看不懂，明天在对照书和楼主的笔记去好好看看。</p>
+</div>
+  </div>
+  <div class="clearfix">
+    <div class="reply2_area">
+      
+        <div class="cell reply2_item" reply_id="5359d5433c1bda71270068a1">
+  <a class="anchor" id="5359d5433c1bda71270068a1"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/6174" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/3872872" title="6174">
+    </a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/6174">6174</a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#5359d5433c1bda71270068a1">4-24 23:23</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+    <div class="markdown-text"><p>很赞， 最近也是因为在做一个node项目， 太没有经验， 所有才想看一下一些现有的代码。  github上node-express-mogoose-demo那个项目其实也很赞， 在cnode上还看到了doubanj 以及 jsgen这两个项目也有很多学习借鉴的地方。 </p>
+<p>打开你的网站 ， 设计很赞啊。   哈哈，除了动态栏消息全是div， 截取字符串没有去掉标签。</p>
+</div>
+  </div>
+</div>
+
+      
+      
+    </div>
+  </div>
+</div>
+<div class="cell reply_area reply_item" id="reply13" reply_id="535a6c43eb05c7a537010d79">
+  <a class="anchor" id="535a6c43eb05c7a537010d79"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/jx-zhou" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/5946044" title="jx-zhou"></a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/jx-zhou">jx-zhou
+      </a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#535a6c43eb05c7a537010d79">4-25 10:08</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+        <!---->
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+  <div class="markdown-text"><p>顶一个</p>
+</div>
+  </div>
+  <div class="clearfix">
+    <div class="reply2_area">
+      
+      
+    </div>
+  </div>
+</div>
+<div class="cell reply_area reply_item" id="reply14" reply_id="535a6c4eeb05c7a53701107c">
+  <a class="anchor" id="535a6c4eeb05c7a53701107c"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/jx-zhou" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/5946044" title="jx-zhou"></a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/jx-zhou">jx-zhou
+      </a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#535a6c4eeb05c7a53701107c">4-25 10:08</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+        <!---->
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+  <div class="markdown-text"><p>顶一个</p>
+</div>
+  </div>
+  <div class="clearfix">
+    <div class="reply2_area">
+      
+      
+    </div>
+  </div>
+</div>
+<div class="cell reply_area reply_item" id="reply15" reply_id="535b3ec2ef6305b441017642">
+  <a class="anchor" id="535b3ec2ef6305b441017642"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/zhanyouwei" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/7271533" title="zhanyouwei"></a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/zhanyouwei">zhanyouwei
+      </a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#535b3ec2ef6305b441017642">4-26 01:06</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+        <!---->
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+  <div class="markdown-text"><p>忘持续更新</p>
+</div>
+  </div>
+  <div class="clearfix">
+    <div class="reply2_area">
+      
+      
+    </div>
+  </div>
+</div>
+<div class="cell reply_area reply_item" id="reply16" reply_id="535b7b0b1550537a4301e7b7">
+  <a class="anchor" id="535b7b0b1550537a4301e7b7"></a>
+  <div class="author_content">
+    <a href="http://cnodejs.org/user/Jeffwan" class="user_avatar">
+      <img src="./通过 nodeclub 项目源码来讲解如何做一个 nodejs + express + mongodb 项目 - CNode_files/4739316" title="Jeffwan"></a>
+    <div class="user_info">
+      <a class="dark reply_author" href="http://cnodejs.org/user/Jeffwan">Jeffwan
+      </a>
+      <a class="reply_time" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#535b7b0b1550537a4301e7b7">4-26 05:23</a>
+    </div>
+    <div class="user_action">
+      
+      <span>
+        
+        <!---->
+      </span>
+    </div>
+  </div>
+  <div class="reply_content">
+  <div class="markdown-text"><p>看了评论，结合最近经验，感觉学习项目确实是一种很好的方式，我要坚持下来！加油，希望LZ持续更新！</p>
+</div>
+  </div>
+  <div class="clearfix">
+    <div class="reply2_area">
+      
+      
+    </div>
+  </div>
+</div>
+
+  </div>
+  
+  
+</div>
+
+
+    </div>
+    <div id="backtotop" style="top: 325px; right: 0px; display: block;">回到顶部</div>
+    <div id="footer">
+      <div id="footer_main">
+        <div class="links">
+          <a class="dark" href="http://cnodejs.org/about">关于</a>
+          |
+          <a class="dark" href="http://cnodejs.org/faq">FAQ</a>
+          |
+          <a class="dark" href="https://github.com/cnodejs/nodeclub/" target="_blank">GitHub</a>
+          |
+          <a class="dark" href="http://cnodejs.org/rss" target="_blank">RSS</a>
+        </div>
+        <div class="col_fade">
+          © 2012 - 2014 <br>本社区为开源系统，版本: 0.3.6 ，欢迎贡献代码<br>
+          本社区搭建在<a href="https://www.digitalocean.com/?refcode=eba02656eeb3" target="_blank"> DigitalOcean </a>上
+        </div>
+      </div>
+    </div>
+    <div id="sidebar-mask"></div>
+    <script defer="">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-41753901-5', 'cnodejs.org');
+      ga('send', 'pageview');
+
+    </script>
+  
+
+<style type="text/css" id="o1a5hfg" class="qxz82r">
+	.wfam64 {
+			border-radius:2px;
+			box-shadow:0 0 7px rgba(0,0,0,0.4);
+			position:absolute;
+			top:376px;
+			left:404px;
+			margin-bottom:100px;
+			background:#fff;
+			z-index:2147483647;
+			display:none;
+			font:14px/1.5 arial,\5b8b\4f53,sans-serif;
+	}
+	
+	.wfam64 .n1v4e6o {}
+
+    .wfam64 .vig9ro {
+        background:#fff;
+        position:absolute;
+        height:8px;
+		width:8px;
+        margin-left:-3px;
+        -webkit-transform:rotate(45deg);
+		transform:rotate(45deg);
+		left:20%;
+    }
+	
+	.wfam64.j5jbkm .vig9ro {
+		box-shadow : -1px -1px 2px rgba(0, 0, 0,0.4);
+        top:-5px;    
+	}
+	
+	.wfam64.y1l5e2z .vig9ro {
+        bottom:-5px;
+		box-shadow : 1px 1px 2px rgba(0, 0, 0,0.4);
+	}
+	
+	.wfam64.lt4smc .vig9ro{
+		left:50%;
+	}
+	
+	.t1pwzkx {
+		font-style:normal;
+		font-size:22px;
+		position:relative;
+		top:4px;
+	}
+	
+	.p16udba {
+		width:182px;
+		padding:20px;
+		font-size:14px;
+	}
+	
+	.p16udba .f1riv6 {
+		text-decoration:none;
+		font-size:12px;
+		color:#999;
+		float:right;	
+		position:relative;
+		top:7px;
+	}
+	
+	.n1v4e6o {
+		overflow:hidden;
+	}
+	
+	.f1riv6:hover {
+		color:#1e90ff;
+	}
+	
+	.m1i0ek4 {
+			width:120px;
+			height:152px;
+			padding:20px;
+    }
+	.m1i0ek4 .qh6qom {
+			 margin-bottom:10px;
+    }
+	
+	.m1i0ek4 .n1v4e6o span{
+		color:red;
+	}
+</style>
+
+<div class="wfam64 j5jbkm p16udba">
+		<div class="vig9ro"></div>
+		<div class="n1v4e6o">
+		同步商品到手机一淘收藏夹，手机购买更优惠！
+		<a class="f1riv6" href="http://cnodejs.org/topic/535601a20d7d0faf140303d8#">我知道了<i class="t1pwzkx">×</i></a>
+	</div>
+</div>
+
+<div class="wfam64 y1l5e2z lt4smc m1i0ek4">
+		<div class="vig9ro"></div>
+		<div class="n1v4e6o">
+			<div class="qh6qom"></div>
+			<div class="fubwm6">手机购买省<span>0</span>元</div>
+		</div>
+</div>
+</body></html>

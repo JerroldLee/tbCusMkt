@@ -5,7 +5,7 @@
 var express = require('express')
     , routes = require('./routes')
     , http = require('http')
-     ,SDK=require('./SDK/index')
+     ,SDK=require('./SDK/index')//add
     , path = require('path');
 routes.successRoute=require('./routes/success');
 routes.main=require('./routes/main');

@@ -8,30 +8,34 @@
  * Module dependencies.
  */
 
-var sign = require('./controllers/sign');
-var site = require('./controllers/site');
-var user = require('./controllers/user');
-var message = require('./controllers/message');
-var tag = require('./controllers/tag');
-var topic = require('./controllers/topic');
-var reply = require('./controllers/reply');
-var rss = require('./controllers/rss');
-var upload = require('./controllers/upload');
-var assets = require('./controllers/static');
-var tools = require('./controllers/tools');
-var auth = require('./middlewares/auth');
-var limit = require('./middlewares/limit');
-var status = require('./controllers/status');
-var github = require('./controllers/github');
-var search = require('./controllers/search');
-var passport = require('passport');
-var configMiddleware = require('./middlewares/conf');
-var config = require('./config');
+var sign = require('./controllers/sign'),
+    site = require('./controllers/site'),
+    success = require('./controllers/success'),
+    main = require('./controllers/main'),
+    user = require('./controllers/user'),
+    message = require('./controllers/message'),
+    tag = require('./controllers/tag'),
+    topic = require('./controllers/topic'),
+    reply = require('./controllers/reply'),
+    rss = require('./controllers/rss'),
+    upload = require('./controllers/upload'),
+    assets = require('./controllers/static'),
+    tools = require('./controllers/tools'),
+    auth = require('./middlewares/auth'),
+    limit = require('./middlewares/limit'),
+    status = require('./controllers/status'),
+    github = require('./controllers/github'),
+    search = require('./controllers/search'),
+    passport = require('passport'),
+    configMiddleware = require('./middlewares/conf'),
+    config = require('./config');
 
 
 module.exports = function (app) {
   // home page
-  app.get('/', site.index);
+  app.get('/', site.index);//进入网站跳转到淘宝授权页面
+  app.get('/success',success.index);//授权成功回调页面
+  app.get('/main', main.index);//授权成功后进入主页
 
   // sign up, login, logout
   if (config.allow_sign_up) {
