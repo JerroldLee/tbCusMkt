@@ -8,7 +8,8 @@ exports.index = function (req, res) {
     var clientsession = req.cookies["client_session"];
     //console.log('clientsession:' + clientsession);
     TopAPI.Execute = _.partial(TopAPI.PostAPI, config.RestUrl(), config.AppKey, config.AppSecret, clientsession);
-      res.render('main');
+    console.log(TopAPI.Execute);return false;
+    res.render('main');
     /* TopAPI.Execute("taobao.shop.remainshowcase.get", {}, function (data) {
      res.render('main', {
      result: data
